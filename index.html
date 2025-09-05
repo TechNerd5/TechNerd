@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My GitHub Website</title>
+  <style>
+    /* ===== General Reset ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f9fafc;
+      text-align: center;
+    }
+
+    /* ===== Header ===== */
+    header {
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #4a90e2, #007aff);
+      color: white;
+    }
+
+    header .logo {
+      max-width: 180px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header .tagline { font-size: 1.2rem; font-weight: 300; opacity: 0.9; margin-bottom: 20px; }
+
+    /* ===== Hero Button ===== */
+    .hero-cta {
+      display: inline-block;
+      padding: 20px 50px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      cursor: pointer;
+      margin-top: 20px;
+      background: linear-gradient(135deg, #ff7a00, #ff3d00);
+      background-size: 200% 200%;
+      box-shadow: 0 8px 20px rgba(255,61,0,0.6),0 0 0 rgba(255,61,0,0);
+      animation: pulseGlow 2s ease-in-out infinite, pulseGradient 3s ease-in-out infinite, scalePulse 2s ease-in-out infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(255,61,0,0.8),0 0 20px rgba(255,61,0,0.6);
+      animation: none;
+      background: linear-gradient(135deg, #ff3d00, #ff7a00);
+    }
+
+    /* ===== Secondary Buttons ===== */
+    .secondary-cta {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #007aff;
+      background: white;
+      border: 2px solid #007aff;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      margin: 10px 5px;
+    }
+
+    .secondary-cta:hover {
+      background: #007aff;
+      color: white;
+      box-shadow: 0 6px 15px rgba(0,122,255,0.3);
+      transform: translateY(-3px);
+    }
+
+    /* ===== Tertiary Links ===== */
+    .tertiary-link {
+      color: #007aff;
+      text-decoration: underline;
+      font-weight: 500;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .tertiary-link:hover {
+      color: #004bb5;
+      text-shadow: 0 0 5px rgba(0,122,255,0.5);
+    }
+
+    /* ===== Sections ===== */
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 { font-size: 2rem; margin-bottom: 20px; color: #007aff; }
+    section p { font-size: 1.1rem; color: #444; line-height: 1.8; margin-bottom: 20px; }
+
+    /* ===== Animations ===== */
+    @keyframes pulseGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes scalePulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes pulseGlow {
+      0%,100% { box-shadow: 0 8px 20px rgba(255,61,0,0.6),0 0 0 rgba(255,61,0,0); }
+      50% { box-shadow: 0 12px 35px rgba(255,61,0,0.8),0 0 20px rgba(255,61,0,0.6); }
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      header .tagline { font-size: 1rem; }
+      section h2 { font-size: 1.5rem; }
+      section p { font-size: 1rem; }
+
+      .hero-cta {
+        padding: 15px 35px;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px rgba(255,61,0,0.5),0 0 0 rgba(255,61,0,0);
+        animation: pulseGlow 4s ease-in-out infinite, pulseGradient 5s ease-in-out infinite, scalePulse 4s ease-in-out infinite;
+      }
+
+      .hero-cta:active {
+        transform: scale(0.97);
+        box-shadow: 0 4px 12px rgba(255,61,0,0.4),0 0 0 rgba(255,61,0,0);
+      }
+
+      .secondary-cta {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header>
+    <img src="your-logo.png" alt="Logo" class="logo">
+    <h1>Welcome to My Site</h1>
+    <p class="tagline">Agile. Affordable. Attentive.</p>
+    <a href="#contact" class="hero-cta">Get Started Now</a>
+  </header>
+
+  <!-- ===== Explore / Secondary Buttons Section ===== -->
+  <section>
+    <h2>Explore</h2>
+    <p>Learn more about what I offer and discover how I can help you achieve your goals.</p>
+    <a href="#learn" class="secondary-cta">Learn More</a>
+    <a href="#pricing" class="secondary-cta">View Pricing</a>
+    <a href="#contact" class="secondary-cta">Contact Us</a>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Have questions or want to get started? Reach out via email or follow the links below.</p>
+    <p>Email: <a href="mailto:you@example.com" class="tertiary-link">you@example.com</a></p>
+    <p>Already a member? <a href="#login" class="tertiary-link">Log in here</a></p>
+    <p>Want more info? <a href="#faq" class="tertiary-link">Check our FAQ</a></p>
+  </section>
+
+</body>
+</html>
